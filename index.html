@@ -13,20 +13,19 @@
                 <h1 class="title">Calculadora de Gorjetas</h1>
             </div>
             <div>
-                <form class="frmtips">
+                <form class="frmtips" id="frmtips">
                     <p>
                         <label for="bill">Qual o valor da conta:</label>
                     </p>
                     <p>
                         R$ <input class="formInput" type="number" id="bill" name="vConta"
-                            placeholder="100,00">
+                            placeholder="100,00" required>
                     </p>
 
                     <label for="service">Como foi seu serviço?</label>
                     <p>
-                        <select class="formSelect" name="service" id="service">
-                            <option disable selected value="0">--Escolha uma
-                                opção--</option>
+                        <select class="formSelect" name="service" id="service" required>
+                            <option disable selected value="">--Escolha uma opção--</option>
                             <option value="0.3">Incrivel - 30%</option>
                             <option value="0.2">Bom - 20%</option>
                             <option value="0.15">Aceitável - 15%</option>
@@ -37,11 +36,17 @@
 
                     <label for="people"><p>Quantas pessoas vão dividir a conta?</p></label>
                     <p><input class="formInput" type="number" id="people" name="people"
-                            placeholder="1"> pessoa(s)</p>
+                            placeholder="1" required> pessoa(s)</p>
 
                     <button class="formSubmit" type="submit">Calcular</button>
                 </form>
             </div>
+            <div id="totalTip">
+                Total Gorjeta:
+                R$<span id="tip">0,00</span>
+                <span id='tipDiv'>cada</span>
+            </div>
         </div>
+        <script type="text/javascript" src="scripts.js"></script>
     </body>
 </html>
